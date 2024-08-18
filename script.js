@@ -2,7 +2,7 @@ const questions = [
     {
       english: "The park is located >between< the library and the school.",
       portuguese: "O parque está localizado _____ a biblioteca e a escola.",
-      answer: "entre",
+      answer: ["entre", "Entre", "ENTRE",],
       audio: "audio/1.mp3" 
     },
     {
