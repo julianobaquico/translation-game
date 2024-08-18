@@ -6,7 +6,7 @@ const questions = [
       audio: "audio/1.mp3" 
     },
     {
-      english: "The website has a responsive layout.",
+      english: "The website has a >responsive< layout.",
       portuguese: "O site possui um layout _____.",
       answer: "responsivo",
       audio: "audio/1.mp3" 
