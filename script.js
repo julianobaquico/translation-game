@@ -1,15 +1,15 @@
 const questions = [
     {
       english: "The park is located >between< the library and the school.",
-      portuguese: "O parque está localizado ___ a biblioteca e a escola.",
+      portuguese: "O parque está localizado _____ a biblioteca e a escola.",
       answer: "entre",
       audio: "audio/1.mp3" 
     },
     {
-      english: "She is a very good singer.",
-      portuguese: "Ela é uma ___ cantora.",
-      answer: "boa",
-      audio: "audio/audio2.mp3" 
+      english: "The website has a responsive layout.",
+      portuguese: "O site possui um layout _____.",
+      answer: "responsivo",
+      audio: "audio/1.mp3" 
     },
     // Adicione mais perguntas aqui
   ];
