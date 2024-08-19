@@ -1,12 +1,12 @@
 const questions = [
   {
-    english: "The park is located >between< the library and the school.",
+    english: "The park is located <b>between</b> the library and the school.",
     portuguese: "O parque está localizado _____ a biblioteca e a escola.",
     answer: ["entre", "Entre", "ENTRE"], // Agora é um array
     audio: "audio/1.mp3" 
   },
   {
-    english: "The website has a >responsive< layout.",
+    english: "The website has a <b>responsive</b> layout.",
     portuguese: "O site possui um layout _____.",
     answer: ["responsivo", "Responsivo", "RESPONSIVO"], // Array de respostas
     audio: "audio/1.mp3" 
@@ -18,7 +18,11 @@ let currentQuestion = 0;
 
 function loadQuestion() {
   const questionData = questions[currentQuestion];
-  document.getElementById("question").textContent = questionData.english;
+  
+  // Aqui não precisamos mais de replace, pois as tags já estão na string
+  let englishText = questionData.english;
+
+  document.getElementById("question").innerHTML = englishText; // Usando innerHTML
   document.getElementById("translation").textContent = questionData.portuguese;
 
   // Limpa a resposta e o resultado
