@@ -2,13 +2,13 @@ const questions = [
   {
     english: "The park is located <b>between</b> the library and the school.",
     portuguese: "O parque está localizado _____ a biblioteca e a escola.",
-    answer: ["entre", "Entre", "ENTRE"], // Agora é um array
+    answer: "entre", 
     audio: "audio/1.mp3" 
   },
   {
     english: "The website has a <b>responsive</b> layout.",
     portuguese: "O site possui um layout _____.",
-    answer: ["responsivo", "Responsivo", "RESPONSIVO"], // Array de respostas
+    answer: "responsivo", 
     audio: "audio/1.mp3" 
   },
   // Adicione mais perguntas aqui
@@ -18,11 +18,7 @@ let currentQuestion = 0;
 
 function loadQuestion() {
   const questionData = questions[currentQuestion];
-  
-  // Aqui não precisamos mais de replace, pois as tags já estão na string
-  let englishText = questionData.english;
-
-  document.getElementById("question").innerHTML = englishText; // Usando innerHTML
+  document.getElementById("question").innerHTML = questionData.english; // Usando innerHTML
   document.getElementById("translation").textContent = questionData.portuguese;
 
   // Limpa a resposta e o resultado
@@ -32,7 +28,7 @@ function loadQuestion() {
 
 // Função para verificar a resposta
 function verificarResposta(respostaUsuario, respostaCorreta) {
-  return respostaCorreta.some(resposta => resposta.toLowerCase() === respostaUsuario.toLowerCase());
+  return respostaCorreta.toLowerCase() === respostaUsuario.toLowerCase(); // Comparando diretamente com a string
 }
 
 function checkAnswer() {
