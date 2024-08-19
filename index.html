@@ -9,17 +9,24 @@
 </head>
 <body>
   <div class="container">
-    <div class="english-box">
-      <div class="question" id="question"></div>
-      <button id="audio-button">Ouvir</button>
+    <div class="card" id="card">
+      <div class="english-box">
+        <div class="question" id="question"></div>
+        <button id="audio-button">Ouvir</button>
+      </div>
+
+      <div class="portuguese-box">
+        <div class="translation" id="translation"></div>
+        <input type="text" id="answer" placeholder="Digite a tradução">
+        <button id="check-button">Verificar</button>
+        <div class="result-container">
+          <div class="result" id="result"></div>
+        </div>
+        <div class="dica" id="dica"></div>
+      </div>
     </div>
 
-    <div class="portuguese-box">
-      <div class="translation" id="translation"></div>
-      <input type="text" id="answer" placeholder="Digite a tradução">
-      <button id="check-button">Verificar</button>
-      <div class="result" id="result"></div>
-    </div>
+    <button id="next-button" style="display: none;">Próximo</button>
   </div>
 
   <script src="script.js"></script>
